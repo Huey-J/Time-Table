@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>시간표 프로잭트</title>
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="logo.css">
+    <link rel="stylesheet" href="sideBar.css">
+    <link rel="stylesheet" href="modal.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="scheduling.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <div id="topGrid">
+        <div id="logo">
+          <img src="로고.jpg" style="width: 50px; padding-left: 100px">
+          <p>플젝로고</p>
+        </div>
+        <h1 style="text-align: center">시간표 프로잭트</h1>
+      </div>
+    </nav>
+
+    <div id="mainGrid" style="margin-top: 30px;">
+      <aside style="padding-left: 20px">
+        <ol>
+          <li><button id="addModal">시간표 추가</button></li>
+          <li><button>내 컴퓨터에 저장하기</button></li>
+          <li><button>테마 변경</button></li>
+        </ol>
+      </aside>
+      <div>
+        <table cellmargin="0" cellpadding="0" style="height:50px;">
+          <th class="day"></th>
+          <th class="day">Monday</th>
+          <th class="day">Tuesday</th>
+          <th class="day">Wednesday</th>
+          <th class="day">Thursday</th>
+          <th class="day">Friday</th>
+          <th class="day">Saturday</th>
+          <th class="day">Sunday</th>
+        </table>
+        <table>
+          <tbody>
+            <tr valign="top">
+              <th>
+                <div class="tableRow">6:00</div>
+                <div class="tableRow">7:30</div>
+                <div class="tableRow">9:00</div>
+                <div class="tableRow">10:30</div>
+                <div class="tableRow">12:00</div>
+                <div class="tableRow">13:30</div>
+                <div class="tableRow">15:00</div>
+                <div class="tableRow">16:30</div>
+                <div class="tableRow">18:00</div>
+                <div class="tableRow">19:30</div>
+                <div class="tableRow">21:00</div>
+                <div class="tableRow">22:30</div>
+                <div class="tableRow" style="border-bottom: solid 1.5px #FF7F54">24:00</div>
+              </th>
+              <td>
+                <div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow" style="border-bottom: solid 1.5px #FF7F54"></div>
+                <div id="mondayGrid" style="position:relative; top:-643px;">
+                  <div style="background:red; height:75px; position:relative;top: 0px;">test1</div>
+                  <div style="background:blue; height:50px; position:relative;top: 0px;">시간표</div>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow" style="border-bottom: solid 1.5px #FF7F54"></div>
+                </div>
+                <div id="tuesdayGrid" style="position:relative; top:-643px;">
+                  <div style="background:pink; height:50px; position:relative;top: 0px;">면접</div>
+                  <div style="background:green; height:50px; position:relative;top: 300px;">수학학원</div>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow" style="border-bottom: solid 1.5px #FF7F54"></div>
+                </div>
+                <div id="wednesdayGrid" style="position:relative; top:-643px;">
+                  <!-- <div style="height:10px; top:200px; background: red;"></div> -->
+                </div>
+              </td>
+              <td>
+                <div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow" style="border-bottom: solid 1.5px #FF7F54"></div>
+                </div>
+                <div id="thursdayGrid" style="position:relative; top:-643px;">
+                  <!-- <div style="height:10px; top:200px; background: red;"></div> -->
+                </div>
+              </td>
+              <td>
+                <div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow" style="border-bottom: solid 1.5px #FF7F54"></div>
+                </div>
+                <div id="fridayGrid" style="position:relative; top:-643px;">
+                  <!-- <div style="height:10px; top:200px; background: red;"></div> -->
+                </div>
+              </td>
+              <td>
+                <div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow" style="border-bottom: solid 1.5px #FF7F54"></div>
+                </div>
+                <div id="saturdayGrid" style="position:relative; top:-643px;">
+                  <!-- <div style="height:10px; top:200px; background: red;"></div> -->
+                </div>
+              </td>
+              <td>
+                <div style="border-right: solid 1.5px #FF7F54">
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow"></div>
+                  <div class="tableRow" style="border-bottom: solid 1.5px #FF7F54"></div>
+                </div>
+                <div id="sundayGrid" style="position:relative; top:-643px;">
+                  <!-- <div style="height:10px; top:200px; background: red;"></div> -->
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- 입력 창 -->
+    <div id="modal">
+      <div class="modal_content">
+        <h3 align="center">일정 기록</h3>
+        <p>내용<input type="text" id="inputText"></p>
+        <p>요일<select id="inputDay">
+          <option value="월">월요일</option>    <option value="화">화요일</option>
+          <option value="수">수요일</option>    <option value="목">목요일</option>
+          <option value="금">금요일</option>    <option value="토">토요일</option>    <option value="일">일요일</option>
+        </select>
+        </p>
+        <p>시간<input type="time" id="inputStartTime" step="900">~
+          <input type="time" id="inputEndTime" step="900"</p>
+        <p>메모<input type="text" id="inputMemo" style="height:60px; width:80%;"></p>
+        <p align="right" style="margin-bottom: 0px;">
+          <input type="submit" value="저장" style="margin-right: 3px;" onclick="saveValue()">
+          <input type="button" value="초기화" id="modal_reset_btn">
+          <input type="reset" value="닫기" id="modal_close_btn">
+        </p>
+      </div>
+      <div class="modal_layer"></div>
+    </div>
+
+    <script>
+      document.getElementById("addModal").onclick = function() {
+        document.getElementById("modal").style.display="block";
+      }
+      document.getElementById("modal_close_btn").onclick = function() {
+        document.getElementById("modal").style.display="none";
+      }
+      document.getElementById("modal_reset_btn").onclick = function() {
+        document.getElementById("inputText").value="";
+        document.getElementById("inputDay").value="";
+        document.getElementById("inputMemo").value="";
+        document.getElementById("inputStartTime").value="";
+        document.getElementById("inputEndTime").value="";
+      }
+    </script>
+
+  </body>
+</html>

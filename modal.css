@@ -1,0 +1,51 @@
+#modal {
+  display: none;
+  position: relative;
+  width: 100%;
+  top: -700px;
+  z-index: 1;
+}
+#modal h3{
+  margin: 0;
+}
+#modal button, #modal input[type=submit], #modal input[type=reset], #modal input[type=button] {
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  padding: 10px 17px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+}
+#modal button:hover, #modal input[type=submit]:hover, #modal input[type=reset]:hover, #modal input[type=button]:hover {
+  background-color: #006C9A;
+}
+#modal input[type=text], #modal input[type=time], #modal select{
+  border: 0.5px solid gray;
+  font-size: 12px;
+  margin-left: 5px;
+  padding: 5px;
+}
+#modal input[type=time] {
+  width: 95px;
+  margin-right: 5px;
+}
+
+#modal .modal_content {
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px 10px;
+  background: #fff;
+  border: 2px solid #666;
+}
+#modal .modal_layer {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}

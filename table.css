@@ -1,0 +1,32 @@
+div, span {
+  margin: 0px;
+  padding: 0px;
+}
+#mainGrid {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+th, tr, td {
+  width: 100px;
+}
+table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse; /*선을 한줄로*/
+}
+.day {
+  background-color:#FFF0E0;
+  font-family:sans-serif;
+  font-weight:bold;
+  height: 35px;
+  border: solid 2px #FF7F54;
+  border-bottom: 0px;
+}
+.tableRow {
+  height: 50px;
+  border: solid 1.5px #FF7F54;
+  border-bottom: 0px;
+  border-right: 0px;
+  margin:-2px;
+}
