@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="logo.css">
     <link rel="stylesheet" href="sideBar.css">
     <link rel="stylesheet" href="modal.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="scheduleButton.css">
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
     <script src="scheduling.js"></script>
+    <script src="removeSchedule.js"></script>
   </head>
 
-  <body>
+  <body style="background-image: url('Background.jpg');">
     <nav>
       <div id="topGrid">
         <div id="logo">
@@ -22,12 +24,13 @@
       </div>
     </nav>
 
-    <div id="mainGrid" style="margin-top: 30px;">
-      <aside style="padding-left: 20px">
-        <ol>
-          <li><button id="addModal">시간표 추가</button></li>
-          <li><button>내 컴퓨터에 저장하기</button></li>
-          <li><button>테마 변경</button></li>
+    <div id="mainGrid" style="margin: 30px;">
+      <aside>
+        <ol style="padding:0px;">
+          <li><button id="addModal">&#128151; 시간표 추가 &#128151;</button></li>
+          <li><button>&#128151; 저장하기 &#128151;</button></li>
+          <li><button>&#128151; 불러오기 &#128151;</button></li>
+          <li><button>&#128151; 다이어리 &#128151;</button></li>
         </ol>
       </aside>
       <div>
@@ -216,8 +219,8 @@
           <option value="금">금요일</option>    <option value="토">토요일</option>    <option value="일">일요일</option>
         </select>
         </p>
-        <p>시간<input type="time" id="inputStartTime" step="900">~
-          <input type="time" id="inputEndTime" step="900"</p>
+        <p>시간<input type="time" id="inputStartTime" step="900" value="06:00">~
+          <input type="time" id="inputEndTime" step="900" value="07:30"></p>
         <p>메모<input type="text" id="inputMemo" style="height:60px; width:80%;"></p>
         <p align="right" style="margin-bottom: 0px;">
           <input type="submit" value="저장" style="margin-right: 3px;" onclick="saveValue()">

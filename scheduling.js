@@ -1,4 +1,5 @@
 var schedules = []; //빈 스케줄 배열 선언
+var cnt = 0;
 var colorArray = ['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6',
 		  '#E6B333', '#3366E6', '#999966', '#99FF99', '#B34D4D',
 		  '#80B300', '#809900', '#E6B3B3', '#6680B3', '#66991A',
@@ -40,15 +41,6 @@ function saveValue() {    //스케줄 저장
   printingSchedule(sname, sday, stime1, smemo, stimediff);
   schedules.push({name : sname, day : sday, time1 : stime1, time2 : stime2, memo : smemo, timediff : stimediff}); //배열 푸시
 
-  // for(var key in schedules) {
-  //   console.log(schedules);
-  //   document.write(schedules[key].name);
-  //   document.write(schedules[key].day);
-  //   document.write(schedules[key].time1);
-  //   document.write(schedules[key].time2);
-  //   document.write(schedules[key].memo);
-  //   document.write(schedules[key].timediff);
-  // }
   console.log(schedules);
 }
 
@@ -58,28 +50,29 @@ function timeCalculation(time1, time2) {    //시간 차이를 초로 계산해�
   var diff = 0;
 
   diff = Math.abs(a-b);
-  // document.write('time diff is : ' + secondsTohhmmss(diff));
   return(diff);
 }
+
 function convertToSeconds(time) {   //초로 바꾸기
   var splitTime = time.split(":");
   return splitTime[0] * 3600 + splitTime[1] * 60;
 }
-// function secondsTohhmmss(secs) {
-//   var hours = parseInt(secs / 3600);
-//   var seconds = parseInt(secs % 3600);
-//   var minutes = parseInt(seconds / 60) ;
-//   return hours + "hours : " + minutes + "minutes ";
-// }
 
 
 function printingSchedule(sname, sday, stime1, smemo, stimediff) {      //스케줄 표에 뿌리기
   var div = document.createElement("div");    //<div>만들기
   div.style.background = colorArray[Math.floor(Math.random()*colorArray.length)];   //색 랜덤값
-  div.style.opacity = "0.7";                //배경 투명도
+  div.style.opacity = "0.8";                //배경 투명도
   div.style.height = (stimediff/109)+"px";  //시간차이만큼 높이값 조절
   div.style.position = "relative";
-  div.innerHTML = sname;
+  div.style.fontWeight = "bold";  div.style.color = "black";
+  div.style.align = "center";
+  div.style.fontSize = "16px";
+
+  div.id = "temp"+cnt;     cnt++;             //스케줄 번호 저장 (삭제할 때 사용)
+
+  div.innerHTML = '<div id="delete_btn" onclick="deleteS(this.parentElement.id)">x <span id="deleteTooltip">삭제</span></div><div id="memoView_btn" value="# "># <span id="memoTooltip">'
+  + smemo +'</span></div><br>' + sname;
 
   var sPoint = findStartTimeGrid(stime1);
 
