@@ -11,6 +11,7 @@ th, tr, td {
   width: 100px;
 }
 table {
+  table-layout: fixed;
   width: 100%;
   text-align: center;
   border-collapse: collapse; /*선을 한줄로*/

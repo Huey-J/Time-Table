@@ -7,7 +7,7 @@ function deleteS(temp) {    //스케줄 삭제
   var num = parseInt(temp[4]);
   var day = schedules[num].day;
   //
-  // if(day == "월") {
+  // if(day == "월") {   //ver.태그 삭제
   //   console.log("delete monday schedule");
   //   mon_cnt -= schedules[num].timediff/109;
   // }
