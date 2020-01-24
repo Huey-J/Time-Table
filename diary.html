@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="google" content="notranslate">  <!-- 구글 번역기능 끄기 -->
+    <title>시간표 프로잭트</title>
+    <link rel="stylesheet" href="sideBar.css">
+    <link rel="stylesheet" href="table.css">
+    <script src="scheduling.js"></script>
+    <script src="removeSchedule.js"></script>
+    <script src="fileManagement.js"></script>
+  </head>
+
+  <body style="background-image: url('Background.jpg');">
+    <img src="logo.png" alt="Logo" style="width:30%; margin: 0 auto; display:block;">
+
+    <div id="mainGrid" style="margin: 0px 10px; margin-top:-20px;">
+      <aside>
+        <ol style="padding:0px;">
+          <li><button id="addModal">&#128151; 시간표 추가 &#128151;</button></li>
+          <li><button id="savefile" onclick=download()>&#128151; 저장하기 &#128151;</button></li>
+          <li><button id="loadfile" onclick=upload()>&#128151; 불러오기 &#128151;</button></li>
+          <li><a href="main.html"><button>&#128151; 시간표 &#128151;</button></a></li>
+        </ol>
+      </aside>
+      <div>
+        <script>
+          document.write(schedules[0].memo);
+        </script>
+
+      </div>
+    </div>
+
+  </body>
+</html>

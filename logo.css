@@ -1,8 +1,0 @@
-#topGrid {
-  display: grid;
-  grid-template-columns: 350px 1fr;
-}
-#logo {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}

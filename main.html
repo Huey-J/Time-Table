@@ -5,35 +5,24 @@
     <meta name="google" content="notranslate">  <!-- 구글 번역기능 끄기 -->
     <title>시간표 프로잭트</title>
     <link rel="stylesheet" href="table.css">
-    <link rel="stylesheet" href="logo.css">
     <link rel="stylesheet" href="sideBar.css">
     <link rel="stylesheet" href="modal.css">
     <link rel="stylesheet" href="scheduleButton.css">
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
     <script src="scheduling.js"></script>
     <script src="removeSchedule.js"></script>
     <script src="fileManagement.js"></script>
   </head>
 
   <body style="background-image: url('Background.jpg');">
-    <nav>
-      <div id="topGrid">
-        <div id="logo">
-          <img src="로고.jpg" style="width: 50px; padding-left: 100px">
-          <p>플젝로고</p>
-        </div>
-        <h1 style="text-align: center">시간표 프로잭트</h1>
-      </div>
-    </nav>
+    <img src="logo.png" alt="Logo" style="width:30%; margin: 0 auto; display:block;">
 
-    <div id="mainGrid" style="margin: 30px;">
+    <div id="mainGrid" style="margin: 0px 10px; margin-top:-20px;">
       <aside>
         <ol style="padding:0px;">
           <li><button id="addModal">&#128151; 시간표 추가 &#128151;</button></li>
           <li><button id="savefile" onclick=download()>&#128151; 저장하기 &#128151;</button></li>
-          <!-- <li><input type="file" accept="text/*" id="selectfile"></li> -->
           <li><button id="loadfile" onclick=upload()>&#128151; 불러오기 &#128151;</button></li>
-          <li><button>&#128151; 다이어리 &#128151;</button></li>
+          <li><a href="diary.html"><button>&#128151; 다이어리 &#128151;</button></a></li>
         </ol>
       </aside>
       <div style="max-height:680px;">
